@@ -45,6 +45,11 @@
     padding: 0;
     margin: 0;
   } */
+
+
+  :root {
+    --install-button-color	: blue;
+  }
   body {
     font-size: 62.5%;
     font-family: 'Quicksand', sans-serif;
@@ -1207,3 +1212,10 @@ footer{
   display: none;
 }
 
+
+.installBtn {
+  background-color: rgb(56, 167, 106);
+  color:white !important;
+  padding:4px 6px;
+  display: inline;
+}

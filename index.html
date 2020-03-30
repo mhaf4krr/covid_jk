@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./new.css">
-    <link rel="stylesheet" href="./svg.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/new.css">
+    <link rel="stylesheet" href="/svg.css">
+    <title>COVID-JK</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="manifest.webmanifest">
+
+  
 </head>
 <body>
     <div class="App">
@@ -18,8 +21,9 @@
             <div class="navbar-left">
                 <a href="/"><span class="fadeInUp focused" style="animation-delay: 0.2s;">Home</span></a>
                 <!-- <a href="/clusters"><span class="fadeInUp " style="animation-delay: 0.3s;">Clusters</span></a>
-                <a href="/links"><span class="fadeInUp " style="animation-delay: 0.4s;">Helpful Links</span></a>
-                <a href="/faq"><span class="fadeInUp " style="animation-delay: 0.4s;">FAQ</span></a> -->
+                <a href="/links"><span class="fadeInUp " style="animation-delay: 0.4s;">Helpful Links</span></a> -->
+                <a href="#" class="installBtn">INSTALL APP</a>
+                
             </div>    
             
         </div>
@@ -34,28 +38,28 @@
                             </div>
                             <div class="last-update">
                                 <h6>Last Updated</h6>
-                                <h3>about 4 hours Ago</h3>
+                                <h3 id="last_updated">about 4 hours Ago</h3>
                             </div>
                         </div>
                     </div>
 
                     <div class="Level fadeInUp" style="animation-delay: 0.8s;">
                         <div class="level-item is-cherry">
-                            <h5>Confirmed</h5><h4>[+5]</h4><h1>1029 </h1>
+                            <h5>Confirmed</h5><h1 id="confirmed_header">1029 </h1>
                         </div>
                         <div class="level-item is-blue">
-                            <h5 class="heading">Active</h5><h4>&nbsp;</h4>
-                            <h1 class="title has-text-info">920</h1>
+                            <h5 class="heading">Active</h5>
+                            <h1 id= "active_header" class="title has-text-info">920</h1>
                         </div>
                         <div class="level-item is-green">
                             <h5 class="heading">Recovered</h5>
-                            <h4>[+0]</h4>
-                            <h1 class="title has-text-success">85 </h1>
+                            
+                            <h1 id="recovered_header" class="title has-text-success">85 </h1>
                         </div>
                         <div class="level-item is-gray">
                             <h5 class="heading">Deceased</h5>
-                            <h4>[+0]</h4>
-                            <h1 class="title has-text-grey">24</h1>
+                           
+                            <h1 id="deceased_header" class="title has-text-grey">24</h1>
                         </div>
                     </div>
 
@@ -104,16 +108,16 @@
                         </div>
                     </div>
 
-                    <h5 class="affected-count fadeInUp" style="animation-delay: 1s;">Districts Affected</h5>
+                    <!-- <h5 class="affected-count fadeInUp" style="animation-delay: 1s;">Districts Affected</h5>
                     
                     <table class="table fadeInUp" style="animation-delay: 1s;">
                         <thead><tr><th class="sticky state-heading"><div class="heading-content"><abbr title="State">State/UT</abbr><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></th><th class="sticky"><div class="heading-content"><abbr class="is-cherry" title="Confirmed">Cnfmd</abbr><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></th><th class="sticky"><div class="heading-content"><abbr class="is-blue" title="Active">Actv</abbr><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></th><th class="sticky"><div class="heading-content"><abbr class="is-green" title="Recovered">Rcvrd</abbr><div class=""></div><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></th><th class="sticky"><div class="heading-content"><abbr class="is-gray" title="Deaths">Dcsd</abbr><div style="display: initial;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></th></tr></thead>
                         <tbody><span class="dropdown rotateDownRight"></span><tr class=""><td style="font-weight: 600;">Srinagar</td><td><span class="deltas" style="color: rgb(255, 7, 58);"></span>9</td><td style="color: inherit;">9</td><td style="color: rgb(181, 181, 181);">-</td><td style="color: rgb(181, 181, 181);">-</td></tr><tr class="spacer" style="display: none;"><td></td><td></td><td></td></tr><tr class="district-heading" style="display: none;"><td><div class="heading-content"><abbr title="District">District</abbr><div style="display: initial;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></td><td><div class="heading-content"><abbr class="is-cherry" title="Confirmed">Cnfmd</abbr><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></td></tr><tr class="district" style="display: none;"><td style="font-weight: 600;">N&amp;M Andaman</td><td>1</td></tr><tr class="district" style="display: none;"><td style="font-weight: 600;">South Andaman</td><td>5</td></tr><tr class="district" style="display: none;"><td class="unknown">Unknown</td><td>3</td></tr><tr class="spacer" style="display: none;"><td></td><td></td><td></td></tr></tbody>
                         <tbody><span class="dropdown rotateDownRight" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span><tr class="is-total"><td style="font-weight: 600;">Total</td><td><span class="deltas" style="color: rgb(255, 7, 58);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>5</span>1029</td><td style="color: inherit;">920</td><td style="color: inherit;">85</td><td style="color: inherit;">24</td></tr><tr class="spacer" style="display: none;"><td></td><td></td><td></td></tr><tr class="district-heading" style="display: none;"><td><div class="heading-content"><abbr title="District">District</abbr><div style="display: initial;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></td><td><div class="heading-content"><abbr class="is-cherry" title="Confirmed">Cnfmd</abbr><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></td></tr><tr class="spacer" style="display: none;"><td></td><td></td><td></td></tr></tbody>
-                    </table>
+                    </table> -->
                     <div>
                         <section>
-                            <canvas id="line-chart" width="800" height="450"></canvas>
+                            <canvas id="pie-chart" width="800" height="450"></canvas>
                         </section>
                     </div>
                 </div>
@@ -127,28 +131,28 @@
                             <div class="stats">
                                 <h5>Confirmed</h5>
                                 <div class="stats-bottom">
-                                    <h1>9</h1>
+                                    <h1 id="maps_confirmed">9</h1>
                                     <h6></h6>
                                 </div>
                             </div>
                             <div class="stats is-blue">
                                 <h5>Active</h5>
                                 <div class="stats-bottom">
-                                    <h1>9</h1>
+                                    <h1 id="maps_active">9</h1>
                                     <h6></h6>
                                 </div>
                             </div>
                             <div class="stats is-green">
-                                <h5>Recovered</h5>
+                                <h5 >Recovered</h5>
                                 <div class="stats-bottom">
-                                    <h1>0</h1>
+                                    <h1 id="maps_recovered">0</h1>
                                     <h6></h6>
                                 </div>
                             </div>
                             <div class="stats is-gray">
-                                <h5>Deceased</h5>
+                                <h5 >Deceased</h5>
                                 <div class="stats-bottom">
-                                    <h1>0</h1><h6></h6>
+                                    <h1 id="maps_deceased">0</h1><h6></h6>
                                 </div>
                             </div>
                         </div>
@@ -247,7 +251,7 @@
              512.61,757.90 502.14,747.17 502.14,747.17
              495.65,742.57 488.90,747.56 482.50,747.94
              478.41,748.19 473.86,746.29 470.00,745.00 Z" />
-  <path id="Selection #22"
+  <path id="AKSAI CHIN"
         fill="none" stroke="black" stroke-width="1"
         d="M 882.50,358.75
            C 883.76,366.99 881.29,366.91 880.45,373.75
@@ -1030,7 +1034,10 @@
     <div class="no-internet">
         <h3>Sorry. You're Offline!</h3>
     </div>
+
     <script src="./app.js"></script>
     <script src="./svg.js"></script>
+    
+   
 </body>
 </html>
