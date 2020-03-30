@@ -117,6 +117,9 @@ map.addEventListener("mouseover", (e) => {
 
 
 function renderBarChart(state_data,name){
+ if(name == "AKSAI CHIN" || name == "PAK"){
+  return
+ }
     let data =
 {
     labels: ['Confirmed', 'Revovered', 'Deceased'],
