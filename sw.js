@@ -1,4 +1,4 @@
-const staticCacheName = "site-static-v2";
+const staticCacheName = "site-static-v5";
 
 
 const assets = [
