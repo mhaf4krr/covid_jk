@@ -5,9 +5,11 @@ fetch(API_URL + (Math.floor(Math.random()*10**8)).toString()).then((response) =>
 }).then((text) => {
    let  patientData = ArraysToDict(CSVToArray(text));
    let  districts = getDistrictNames()
-
+    
     calculateDistrictData(patientData,districts)
     createTableEntries()
+    renderDefaultMapView()
+    renderColoredMap()
 });
 
 

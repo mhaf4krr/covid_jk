@@ -1,5 +1,15 @@
 let districtsData = []
 
+let districts_array = []
+
+
+let states_data = {
+    JK : null,
+
+    LEH : null
+}
+
+
 let map = document.querySelector("#jk_map")
 
 function getDistrictNames(){
@@ -14,7 +24,7 @@ function getDistrictNames(){
    return districts
 }
 
-getDistrictNames()
+
 
 
 

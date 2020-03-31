@@ -19,12 +19,6 @@ let maps_recovered = document.querySelector("#maps_recovered")
 let maps_deceased = document.querySelector("#maps_deceased")
 
 
-let states_data = {
-    JK : null,
-
-    LEH : null
-}
-
 
 
 

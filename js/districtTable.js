@@ -11,7 +11,7 @@ function createTableEntries(){
     let total_deceased = 0;
 
 
-    let districts_array = []
+    
 
     let html = ""
     for(const district in districtsData){
@@ -20,9 +20,26 @@ function createTableEntries(){
 
        districts_array.push(district_data)
        // Rearrange Array
-      
         
+      
     }
+
+
+    
+
+    // Add Ladakh Details
+
+    let ladakh_data = states_data.LEH
+
+    districts_array.push({
+        confirmed: ladakh_data.confirmed,
+        recovered: ladakh_data.recovered,
+        active:ladakh_data.active,
+        district:ladakh_data.loc.toUpperCase(),
+        deceased:ladakh_data.deceased
+    })
+
+    districtsData["LADAKH"] = ladakh_data
 
     districts_array.sort(compareStats)
 
@@ -51,7 +68,7 @@ function createTableEntries(){
         <tr class=""><td style="font-weight: 600;">
            ${district_data.district}</td>
             <td>
-            <span class="deltas" style="color: rgb(255, 7, 58);"></span>
+        
             ${district_data.confirmed}</td>
             <td style="color: inherit;">
             ${district_data.active}</td>
@@ -80,7 +97,7 @@ function createTableEntries(){
 
         <span class="dropdown rotateDownRight" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span><tr class="is-total"><td style="font-weight: 600;">
         Total</td>
-        <td><span class="deltas" style="color: rgb(255, 7, 58);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>5</span>
+        <td>
             ${total_confirmed}</td>
             <td style="color: inherit;">
               ${total_active}
