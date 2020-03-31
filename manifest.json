@@ -1,7 +1,7 @@
 {
     "name" : "Covid Tracker",
     "short_name" : "CovidJK",
-    "start_url" : "/index.html",
+    "start_url" : "/covid_jk/index.html",
     "display" : "standalone",
     "theme_color" : "#deebff",
     "background_color":"#deebff",
