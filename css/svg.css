@@ -1,10 +1,13 @@
 #jk_map path {
     fill:rgb(255, 237, 228);
-    stroke:black;
-    stroke-width: 5px;
+    stroke:rgb(151, 148, 148);
+    /* stroke-width: 5px; */
+    transition: all .4s;
 }
 
 #jk_map  path:hover {
-    stroke: rgb(199, 56, 37);
-    stroke-width: 12px;
+    stroke: rgb(49, 48, 48);
+    stroke-width: 6px;
+    transform: scale(1.011);
+   
 }
