@@ -25,7 +25,7 @@ let maps_deceased = document.querySelector("#maps_deceased")
 fetch("https://api.rootnet.in/covid19-in/stats/latest")
     .then((response) => { return response.json() })
     .then((data) => {
-        console.log(data)
+      
         let jk = data.data.regional[10]
         let ladakh = data.data.regional[13]
 
@@ -41,7 +41,7 @@ fetch("https://api.rootnet.in/covid19-in/stats/latest")
         jk.active = jk.confirmed - jk.recovered - jk.deceased
         ladakh.active = ladakh.confirmed - ladakh.recovered - ladakh.deceased
 
-        console.log(jk, ladakh)
+        
 
         states_data.JK = jk
         states_data.LEH = ladakh
@@ -84,13 +84,15 @@ function renderMapHeaderStats(region) {
 
 
 map.addEventListener("mouseover", (e) => {
-    console.log(e.target.id)
+  
     renderDistrictDetails(e.target.id)
 
 })
 
-map.addEventListener("mouseout",()=>{
-    renderDefaultMapView()
+
+
+map.addEventListener("click",(e)=>{
+    renderDistrictDetails(e.target.id)
 })
 
 function renderBarChart(state_data, name) {
@@ -201,7 +203,7 @@ function renderDistrictDetails(district){
 
     display_place_name.textContent = district
 
-    console.log(details)
+
 
     /* MAP STATS */
 

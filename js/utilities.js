@@ -13,7 +13,7 @@ let states_data = {
 let map = document.querySelector("#jk_map")
 
 function getDistrictNames(){
-    console.log(map.children[0].children)
+ 
     let regions = map.children[0].children
     let districts = []
 

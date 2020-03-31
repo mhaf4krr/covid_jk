@@ -18,7 +18,7 @@ function calculateDistrictData(patientData,districts){
     let data = {}
     
     districts.forEach((district)=>{
-        console.log(district)
+       
    
         data[`${district}`] = calculateStats(patientData,district)
     })
