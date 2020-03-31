@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./new.css">
-    <link rel="stylesheet" href="./svg.css">
-    <title>COVID-JK</title>
+    <link rel="stylesheet" href="./css/new.css">
+    <link rel="stylesheet" href="./css/svg.css">
+    <title>COVID-JK & LADAKH</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <link rel="manifest" href="./manifest.json">
     <link rel="manifest" href="./manifest.webmanifest">
@@ -33,32 +33,42 @@
                     <div class="header fadeInUp" style="animation-delay: 0.5s;">
                         <div class="header-mid">
                             <div class="titles">
-                                <h1>JK COVID-19 Tracker</h1>
+                                <h1>JK & LADAKH COVID-19 Tracker</h1>
                                 <h6>Islamic University of Science and Technology</h6>
                             </div>
                             <div class="last-update">
-                                <h6>Last Updated</h6>
-                                <h3 id="last_updated">about 4 hours Ago</h3>
+                                <h6>Updated</h6>
+                                <h3 id="last_updated">AS GOVT. UPDATES</h3>
                             </div>
                         </div>
                     </div>
 
+
+                    <div>
+                        <section>
+                            <canvas id="pie-chart" width="800" height="450"></canvas>
+                        </section>
+                    </div>
+
                     <div class="Level fadeInUp" style="animation-delay: 0.8s;">
                         <div class="level-item is-cherry">
-                            <h5>Confirmed</h5><h1 id="confirmed_header">1029 </h1>
+                            <h5>Confirmed</h5>
+                            <h5>JK + LADAKH</h5>
+                            <h1 id="confirmed_header">1029 </h1>
                         </div>
                         <div class="level-item is-blue">
                             <h5 class="heading">Active</h5>
+                            <h5>JK + LADAKH</h5>
                             <h1 id= "active_header" class="title has-text-info">920</h1>
                         </div>
                         <div class="level-item is-green">
                             <h5 class="heading">Recovered</h5>
-                            
+                            <h5>JK + LADAKH</h5>
                             <h1 id="recovered_header" class="title has-text-success">85 </h1>
                         </div>
                         <div class="level-item is-gray">
                             <h5 class="heading">Deceased</h5>
-                           
+                            <h5>JK + LADAKH</h5>
                             <h1 id="deceased_header" class="title has-text-grey">24</h1>
                         </div>
                     </div>
@@ -108,18 +118,35 @@
                         </div>
                     </div>
 
-                    <!-- <h5 class="affected-count fadeInUp" style="animation-delay: 1s;">Districts Affected</h5>
+                    <h5 class="affected-count fadeInUp" style="animation-delay: 1s;">AS PER LOCAL DATA(UNOFFICIAL)</h5>
                     
                     <table class="table fadeInUp" style="animation-delay: 1s;">
-                        <thead><tr><th class="sticky state-heading"><div class="heading-content"><abbr title="State">State/UT</abbr><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></th><th class="sticky"><div class="heading-content"><abbr class="is-cherry" title="Confirmed">Cnfmd</abbr><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></th><th class="sticky"><div class="heading-content"><abbr class="is-blue" title="Active">Actv</abbr><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></th><th class="sticky"><div class="heading-content"><abbr class="is-green" title="Recovered">Rcvrd</abbr><div class=""></div><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></th><th class="sticky"><div class="heading-content"><abbr class="is-gray" title="Deaths">Dcsd</abbr><div style="display: initial;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></th></tr></thead>
-                        <tbody><span class="dropdown rotateDownRight"></span><tr class=""><td style="font-weight: 600;">Srinagar</td><td><span class="deltas" style="color: rgb(255, 7, 58);"></span>9</td><td style="color: inherit;">9</td><td style="color: rgb(181, 181, 181);">-</td><td style="color: rgb(181, 181, 181);">-</td></tr><tr class="spacer" style="display: none;"><td></td><td></td><td></td></tr><tr class="district-heading" style="display: none;"><td><div class="heading-content"><abbr title="District">District</abbr><div style="display: initial;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></td><td><div class="heading-content"><abbr class="is-cherry" title="Confirmed">Cnfmd</abbr><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></td></tr><tr class="district" style="display: none;"><td style="font-weight: 600;">N&amp;M Andaman</td><td>1</td></tr><tr class="district" style="display: none;"><td style="font-weight: 600;">South Andaman</td><td>5</td></tr><tr class="district" style="display: none;"><td class="unknown">Unknown</td><td>3</td></tr><tr class="spacer" style="display: none;"><td></td><td></td><td></td></tr></tbody>
-                        <tbody><span class="dropdown rotateDownRight" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span><tr class="is-total"><td style="font-weight: 600;">Total</td><td><span class="deltas" style="color: rgb(255, 7, 58);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>5</span>1029</td><td style="color: inherit;">920</td><td style="color: inherit;">85</td><td style="color: inherit;">24</td></tr><tr class="spacer" style="display: none;"><td></td><td></td><td></td></tr><tr class="district-heading" style="display: none;"><td><div class="heading-content"><abbr title="District">District</abbr><div style="display: initial;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></td><td><div class="heading-content"><abbr class="is-cherry" title="Confirmed">Cnfmd</abbr><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></td></tr><tr class="spacer" style="display: none;"><td></td><td></td><td></td></tr></tbody>
-                    </table> -->
-                    <div>
-                        <section>
-                            <canvas id="pie-chart" width="800" height="450"></canvas>
-                        </section>
-                    </div>
+                        <thead><tr><th class="sticky state-heading"><div class="heading-content"><abbr title="State">DISTRICT</abbr><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></th><th class="sticky"><div class="heading-content"><abbr class="is-cherry" title="Confirmed">Cnfmd</abbr><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></th><th class="sticky"><div class="heading-content"><abbr class="is-blue" title="Active">Actv</abbr><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></th><th class="sticky"><div class="heading-content"><abbr class="is-green" title="Recovered">Rcvrd</abbr><div class=""></div><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></th><th class="sticky"><div class="heading-content"><abbr class="is-gray" title="Deaths">Dcsd</abbr><div style="display: initial;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></th></tr>
+                        </thead>
+
+
+
+                        <tbody id="district_table_container">
+
+                        </tbody>
+                        
+                    
+                        <tbody id="table_total"> 
+                            
+                            <span class="dropdown rotateDownRight" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span><tr class="is-total"><td style="font-weight: 600;">
+                            Total</td>
+                            <td><span class="deltas" style="color: rgb(255, 7, 58);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>5</span>
+                                1029</td>
+                                <td style="color: inherit;">
+                                    920
+                                </td><td style="color: inherit;">
+                                    85
+                                </td><td style="color: inherit;">
+                                    24
+                                </td></tr><tr class="spacer" style="display: none;"><td></td><td></td><td></td></tr><tr class="district-heading" style="display: none;"><td><div class="heading-content"><abbr title="District">District</abbr><div style="display: initial;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></td><td><div class="heading-content"><abbr class="is-cherry" title="Confirmed">Cnfmd</abbr><div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></div></div></td></tr><tr class="spacer" style="display: none;"><td></td><td></td><td></td></tr>
+                            </tbody>
+                    </table>
+                   
                 </div>
                 <div class="home-right">
                     <div class="MapExplorer fadeInUp" style="animation-delay: 1.2s;">
@@ -1020,12 +1047,12 @@
     </section>
     
     
-    <footer class="fadeInUp" style="animation-delay: 2s;">
+    <footer id="worker" class="fadeInUp" style="animation-delay: 2s;">
        <div class="row">
            <div class="col-1">
             <p class="uni">&copy;Islamic University Of Science and Technology</p>
            <p class="dev">Developed By Mufti Hyder Ali & Abdul Mannan Malik</p>
-           <p class="cred">Reference from <a href="https://www.covid19india.org/">Covid19india</a></p>
+           <p class="cred">Reference from <a href="https://www.covid19india.org/">Covid19india</a> and <a href="https://covidkashmir.org/">covidkashmir</a></p>
            </div>
           
        </div>
@@ -1035,9 +1062,11 @@
         <h3>Sorry. You're Offline!</h3>
     </div>
 
+    <script src="./js/utilities.js"></script>
     <script src="./app.js"></script>
-    <script src="./svg.js"></script>
-    
+    <script src="./js/svg.js"></script>
+    <script src="./js/map.js"></script>
+    <script src="./js/districtTable.js"></script>
    
 </body>
 </html>
