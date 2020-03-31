@@ -43,7 +43,7 @@ function createTableEntries(){
 
     districts_array.sort(compareStats)
 
-    console.log(districts_array)
+  
 
     for(let i = 0 ; i < districts_array.length;i++){
 

@@ -149,6 +149,7 @@ function renderPieChart(data) {
 
 function renderDefaultMapView() {
     let region = states_data["JK"]
+    display_place_name.textContent = "JAMMU KASHMIR"
     renderMapHeaderStats(region)
     renderBarChart([region.confirmed, region.recovered, region.deceased], "JAMMU KASHMIR")
 }
