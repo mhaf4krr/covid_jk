@@ -1,13 +1,14 @@
 const staticCacheName = "site-static-v2";
 
+
 const assets = [
-    '/',
-    '/index.html',
-    '/new.css',
-    '/svg.css',
-    '/svg.js',
-    '/map.svg',
-    '/app.js',
+    '/covid_jk/',
+    '/covid_jk/index.html',
+    '/covid_jk/new.css',
+    '/covid_jk/svg.css',
+    '/covid_jk/svg.js',
+    '/covid_jk/map.svg',
+    '/covid_jk/app.js',
     "https://cdn.jsdelivr.net/npm/chart.js@2.8.0"
 ]
 
