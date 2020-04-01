@@ -26,9 +26,21 @@ fetch("https://api.rootnet.in/covid19-in/stats/latest")
     .then((response) => { return response.json() })
     .then((data) => {
       
-        let jk = data.data.regional[10]
-        let ladakh = data.data.regional[13]
 
+        
+        let jk = null
+        let ladakh = null
+
+
+        for(let i = 0 ;i< data.data.regional.length ;i++){
+            if(data.data.regional[i].loc === "Jammu and Kashmir"){
+                jk = data.data.regional[i]
+            }
+
+            else if (data.data.regional[i].loc === "Ladakh"){
+                ladakh = data.data.regional[i]
+            }
+        }
 
 
         jk.confirmed = jk.confirmedCasesIndian + jk.confirmedCasesForeign
